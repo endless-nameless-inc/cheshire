@@ -1,3 +1,4 @@
+[![CircleCI](https://circleci.com/gh/endless-nameless-inc/cheshire/tree/master.svg?style=shield)](https://circleci.com/gh/endless-nameless-inc/cheshire/tree/master)
 [![Coverage Status](https://coveralls.io/repos/github/endless-nameless-inc/cheshire/badge.svg?branch=master)](https://coveralls.io/github/endless-nameless-inc/cheshire?branch=master)
 
 # Cheshire
