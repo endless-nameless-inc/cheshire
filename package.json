@@ -17,6 +17,7 @@
     "lodash": "^4.17.10",
     "sqlite3": "^4.0.0",
     "supertest": "^3.1.0",
+    "truffle": "^4.1.11",
     "truffle-contract": "^3.0.5",
     "web3": "v0.20.6"
   },
