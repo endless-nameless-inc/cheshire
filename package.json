@@ -2,6 +2,7 @@
   "dependencies": {
     "@koa/cors": "2",
     "axios": "^0.18.0",
+    "coveralls": "^3.0.1",
     "ejs": "^2.6.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
@@ -28,7 +29,8 @@
     "script": "node ./scripts/run-script.js",
     "eslint": "eslint .",
     "postinstall": "truffle compile",
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "test-ci": "jest --coverage --coverageReporters=text-lcov | coveralls"
   },
   "jest": {
     "testMatch": [

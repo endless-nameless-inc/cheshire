@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/github/endless-nameless-inc/cheshire/badge.svg?branch=master)](https://coveralls.io/github/endless-nameless-inc/cheshire?branch=master)
+
 # Cheshire
 
 Cheshire enables fast CryptoKitties dApp development by providing local implementations of the CryptoKitties web API and smart contracts. It features:
