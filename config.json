@@ -1,0 +1,18 @@
+{
+  "accounts": [
+    { "address": "0x182fc09c33fdd6c2f5b2562f3ca721fa954689c8", "secretKey": "0x76a67ae288fd67ea8d4f7fb94f50c36b606d9448db579584af90d52105f9d8cf", "balance": 1000000000000000000000 },
+    { "address": "0x2598fcd1ac410634ca8eb3650fa4c376a529d992", "secretKey": "0x7bc56a099a78d79deba210208ecf214c17e4a913b417dbf854b57edd317eb92f", "balance": 1000000000000000000000 },
+    { "address": "0x0644f548e875d7230f63b410b0b82b20c2c171ad", "secretKey": "0x130bac243499b440aeeaba88e14a6dd1e2d17c82a85ba928aeed354699fbd795", "balance": 1000000000000000000000 },
+    { "address": "0x1b19148feefe61ec51615c9383884bd47756b257", "secretKey": "0xa9d33ee7ff5359209e6b27a0625a242767ba18218f598ebc2f15733420ad6798", "balance": 1000000000000000000000 },
+    { "address": "0x54ae89d6e3398ae0d05e85ae0c854aaac8e951bc", "secretKey": "0x0881c14ffcf978b43eedf57a49d3bcecbbbbb317f6b1098f2d5996b7702744b3", "balance": 1000000000000000000000 },
+    { "address": "0x38013fc28df45ec3dc9ca4fc5e95ae488a30a877", "secretKey": "0xca74aa1b79d87563e38d5ff0384ad678c7b176bcd7caa2c503bcfd0004e6567d", "balance": 1000000000000000000000 },
+    { "address": "0x847ec3909f604f9c20a17e0ada616d8035375049", "secretKey": "0x99995bdd84af8d1cb2548808d3f2c4ec8dc1b79577856c064f2bf346aeaad2cd", "balance": 1000000000000000000000 },
+    { "address": "0x700a66fc44412febcc4e2835ad16eefb054fe09f", "secretKey": "0xe17ad3108883ae14866f3598e65d4d27726efb990f381254d1b909ea783502e4", "balance": 1000000000000000000000 },
+    { "address": "0x78788b7ad356053068619f399497712d423eb1e9", "secretKey": "0x44d6627a1e7dcb0d0c353a067ad901449d756c97b38b4feb99c0e752fbbb80d1", "balance": 1000000000000000000000 },
+    { "address": "0xcdf40e926a778d93429b72c341b4a9e0ee8624c4", "secretKey": "0x6e77cfded732de6d423abcaccc45ee8c4bdc2eb3c0c47938acb386ac17c496b8", "balance": 1000000000000000000000 }
+  ],
+  "ethNodeMainnet": "https://mainnet.infura.io/zLnbh6raC9FoqZqNzfAo",
+  "addressKittyCoreMainnet": "0x06012c8cf97bead5deae237070f9587f8e7a266d",
+  "portTestnet": 8545,
+  "portApi": 4000
+}

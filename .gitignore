@@ -1,0 +1,8 @@
+build
+coverage
+node_modules
+scripts/call-race.js
+scripts/call-register-for-race.js
+scripts/give-me-kitties.js
+scripts/setup-kitty-race.js
+yarn-error.log

@@ -1,0 +1,45 @@
+{
+  "dependencies": {
+    "@koa/cors": "2",
+    "axios": "^0.18.0",
+    "ejs": "^2.6.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "ganache-cli": "^6.1.0",
+    "jest": "^23.0.0",
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-mount": "^3.0.0",
+    "koa-router": "^7.4.0",
+    "koa-static": "^4.0.3",
+    "koa-views": "^6.1.4",
+    "lodash": "^4.17.10",
+    "sqlite3": "^4.0.0",
+    "supertest": "^3.1.0",
+    "truffle-contract": "^3.0.5",
+    "web3": "v0.20.6"
+  },
+  "scripts": {
+    "help": "node ./scripts/run-script.js ./scripts/help.js",
+    "dashboard": "open http://localhost:4000",
+    "mine": "truffle --network cheshire exec scripts/mine-blocks.js",
+    "script": "node ./scripts/run-script.js",
+    "eslint": "eslint .",
+    "postinstall": "truffle compile",
+    "test": "jest --coverage"
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/*.js"
+    ],
+    "coverageReporters": [
+      "text-summary",
+      "lcov"
+    ],
+    "bail": true,
+    "restoreMocks": true,
+    "testEnvironment": "node"
+  },
+  "license": "MIT"
+}

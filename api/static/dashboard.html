@@ -1,0 +1,108 @@
+<html>
+<head>
+  <title>Cheshire Dashboard</title>
+
+  <script src="/static/axios.min.js"></script>
+  <script src="/static/vue.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="/static/bootstrap.min.css">
+
+  <style>
+  h2 {
+    margin-top: 1em;
+  }
+
+  .kitty img {
+    height: 200px;
+    width: 200px;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div id="cheshire-dashboard">
+          <h2>Contracts</h2>
+          <table v-if="Object.keys(contracts).length > 0" class="table table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Address</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(address, name) in contracts" class="contract">
+                <td>{{ name }}</td>
+                <td>{{ address }}</td>
+              </tr>
+            </tbody>
+          </table>
+          <div v-else>
+            No contracts found
+          </div>
+
+          <h2>Kitties</h2>
+          <table v-if="kitties.length > 0" class="table table-striped">
+            <thead>
+              <tr>
+                <th></th>
+                <th>ID (testnet)</th>
+                <th>Name</th>
+                <th>Owner</th>
+                <th>Attributes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="kitty in kitties" class="kitty" :style="'background-color:' + colorMap[kitty.color]">
+                <td><img :src="kitty.image_url_cdn" /></td>
+                <td>{{ kitty.id }}</td>
+                <td>
+                  <span v-if="kitty.name">{{ kitty.name }}</span>
+                  <em v-else class="text-muted">No name</em>
+                </td>
+                <td>{{ kitty.owner.address }}</td>
+                <td>
+                  <a v-on:click="kitty.showAttrs = !kitty.showAttrs" href="javascript:void(0)">
+                    <span v-if="!kitty.showAttrs">Show</span>
+                    <span v-else>Hide</span>
+                  </a>
+
+                  <pre v-if="kitty.showAttrs">{{ kitty }}</pre>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div v-else>
+            No kitties found
+          </div>
+
+          <h2>Users</h2>
+          <table v-if="users.length > 0" class="table table-striped">
+            <thead>
+              <tr>
+                <th>Address</th>
+                <th>Nickname</th>
+                <th>Attributes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="user in users">
+                <td>{{ user.address }} </td>
+                <td>{{ user.nickname }}</td>
+                <td><pre>{{ user }}</pre></td>
+              </tr>
+            </tbody>
+          </table>
+          <div v-else>
+            No users found
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/static/dashboard.js"></script>
+</body>
+</html>

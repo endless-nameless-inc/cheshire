@@ -1,0 +1,25 @@
+{
+  "ignore": [
+    ".eslintignore",
+    ".eslintrc.json",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "box-img-lg-template.png",
+    "box-img-sm-template.png",
+    "test"
+  ],
+  "commands": {
+    "Start Cheshire": "yarn start",
+    "Open Cheshire dashboard": "yarn run dashboard",
+    "Run Cheshire script": "yarn run script ./scripts/yourscript.js",
+    "Mine blocks": "yarn run mine <num blocks>",
+    "Help / System status": "yarn run help",
+    "Compile contracts": "truffle compile",
+    "Migrate contracts": "truffle migrate",
+    "Test contracts": "truffle test"
+  },
+  "hooks": {
+    "post-unpack": "yarn install"
+  }
+}
