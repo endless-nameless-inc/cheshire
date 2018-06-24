@@ -120,7 +120,7 @@ truffle(cheshire)> kittyCore = KittyCore.at('0xa751b62893867d0608a2ada5d17d0c43e
 truffle(cheshire)> kittyCore.getKitty(1)
 ```
 
-The response should pretty similar to the one you get from the [mainnet contract](https://etherscan.io/address/0x06012c8cf97bead5deae237070f9587f8e7a266d#readContract).
+The response should be pretty similar to the one you get from the [mainnet contract](https://etherscan.io/address/0x06012c8cf97bead5deae237070f9587f8e7a266d#readContract).
 
 ## Suggested Conventions
 
@@ -173,7 +173,7 @@ Cheshire executes `/scripts/setup.js` when started. You should update the `setup
    log('KittyRace deployed at:', kittyRace.address)
    ```
 
-2. Start your dApp's web application so it inherits the various [environment variables](#cheshire-environment-variables) set by Cheshire.
+2. Start your dApp's web application, so it inherits the various [environment variables](#cheshire-environment-variables) set by Cheshire.
 
    We recommend adopting the convention in the `setup.js` shipped with Cheshire which simply expects the `APP_START` environment variable to contain a command that starts your dApp's web application.
 
@@ -191,7 +191,7 @@ yarn start ./scripts/setup-registered-racers.js 9
 
 ### Cheshire API Reference
 
-Scripts receive an instance of the Cheshire class with these methods:
+Cheshire scripts receive an instance of the Cheshire class with these methods:
 
 #### `accounts()`
 Returns array of available Ethereum accounts (the same accounts defined in config.json)
