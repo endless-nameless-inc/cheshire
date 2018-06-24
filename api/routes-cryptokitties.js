@@ -17,9 +17,9 @@ module.exports = new Router()
   .get('/kitties', async (ctx) => {
     const limit = ctx.query.limit ? parseInt(ctx.query.limit, 10) : 12
     const offset = ctx.query.offset ? parseInt(ctx.query.offset, 10) : 0
-    const kitties = (await Kitty.findAllByOwner(ctx.query.owner_wallet_address, limit, offset))
+    const kitties = (await Kitty.findAll(ctx.query.owner_wallet_address, limit, offset))
       .map(row => JSON.parse(row.api_object))
-    const total = await Kitty.count()
+    const total = await Kitty.count(ctx.query.owner_wallet_address)
 
     ctx.body = {
       limit,

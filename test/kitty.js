@@ -23,6 +23,11 @@ describe('kitty', () => {
     expect(count).toBe(4)
   })
 
+  it('count should return total number of kitties owned by address', async () => {
+    const count = await Kitty.count('0x123')
+    expect(count).toBe(3)
+  })
+
   it('count should handle database errors', async () => {
     jest
       .spyOn(Kitty.db, 'get')
@@ -87,29 +92,29 @@ describe('kitty', () => {
     expect(getKittyMock).toHaveBeenCalledWith(123)
   })
 
-  it('findAllByOwner should return all kitties associated with an address', async () => {
-    const kitties = await Kitty.findAllByOwner('0x123', 12, 0)
+  it('findAll should return all kitties associated with an address', async () => {
+    const kitties = await Kitty.findAll('0x123', 12, 0)
     expect(kitties.length).toBe(3)
     expect(kitties[0].api_object).toBeDefined()
   })
 
-  it('findAllByOwner should handle database errors', async () => {
+  it('findAll should handle database errors', async () => {
     jest
       .spyOn(Kitty.db, 'all')
       .mockImplementation((...params) => {
         params[params.length - 1]('DB Error!') // callback('DB Error!')
       })
 
-    expect(Kitty.findAllByOwner('0x123', 12, 0)).rejects.toEqual('DB Error!')
+    expect(Kitty.findAll('0x123', 12, 0)).rejects.toEqual('DB Error!')
   })
 
-  it('findAllByOwner should return an empty array when no kitties are found', async () => {
-    const kitties = await Kitty.findAllByOwner('0x234', 12, 0)
+  it('findAll should return an empty array when no kitties are found', async () => {
+    const kitties = await Kitty.findAll('0x234', 12, 0)
     expect(kitties.length).toBe(0)
   })
 
-  it('findAllByOwner should return all kitties when no owner filter is given', async () => {
-    const kitties = await Kitty.findAllByOwner(null, 12, 0)
+  it('findAll should return all kitties when no owner filter is given', async () => {
+    const kitties = await Kitty.findAll(null, 12, 0)
     expect(kitties.length).toBe(4)
   })
 

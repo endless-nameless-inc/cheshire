@@ -44,7 +44,7 @@ describe('routes-cryptokitties', () => {
   })
 
   it('GET /kitties should return kitties associated with owner_wallet_address', async () => {
-    Kitty.findAllByOwner = jest.fn().mockResolvedValue([
+    Kitty.findAll = jest.fn().mockResolvedValue([
       { api_object: '{"name": "cheshire"}' },
       { api_object: '{"name": "snowball"}' },
     ])
@@ -65,14 +65,14 @@ describe('routes-cryptokitties', () => {
           total: 2,
         })
 
-        expect(Kitty.findAllByOwner).toHaveBeenCalledTimes(1)
-        expect(Kitty.findAllByOwner).toHaveBeenCalledWith('0x123', 5, 0)
+        expect(Kitty.findAll).toHaveBeenCalledTimes(1)
+        expect(Kitty.findAll).toHaveBeenCalledWith('0x123', 5, 0)
         expect(Kitty.count).toHaveBeenCalledTimes(1)
       })
   })
 
   it('GET /kitties should use default limit and offset', async () => {
-    Kitty.findAllByOwner = jest.fn().mockResolvedValue([
+    Kitty.findAll = jest.fn().mockResolvedValue([
       { api_object: '{"name": "cheshire"}' },
       { api_object: '{"name": "snowball"}' },
     ])
@@ -93,8 +93,8 @@ describe('routes-cryptokitties', () => {
           total: 2,
         })
 
-        expect(Kitty.findAllByOwner).toHaveBeenCalledTimes(1)
-        expect(Kitty.findAllByOwner).toHaveBeenCalledWith('0x123', 12, 0)
+        expect(Kitty.findAll).toHaveBeenCalledTimes(1)
+        expect(Kitty.findAll).toHaveBeenCalledWith('0x123', 12, 0)
         expect(Kitty.count).toHaveBeenCalledTimes(1)
       })
   })
