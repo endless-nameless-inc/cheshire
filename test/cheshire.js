@@ -139,7 +139,7 @@ describe('cheshire', () => {
     expect(helpText).toMatch(/SiringClockAuction/)
 
     expect(helpText).toMatch(/Services/)
-    expect(helpText).toMatch(/Ethereum testnet.*port 8545/)
+    expect(helpText).toMatch(/Ethereum testnet.*port 8546/)
     expect(helpText).toMatch(/CryptoKitties API.*http:\/\/localhost:4000/)
   })
 })
