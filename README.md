@@ -83,7 +83,7 @@ SiringClockAuction: 0x671843106e07f9d835d7299381cd14863af18593
 
 Services
 ====================
-Ethereum testnet listening on port 8545
+Ethereum testnet listening on port 8546
 CryptoKitties API listening on port 4000
 Cheshire dashboard available at http://localhost:4000
 

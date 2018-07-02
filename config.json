@@ -13,6 +13,6 @@
   ],
   "ethNodeMainnet": "https://mainnet.infura.io/zLnbh6raC9FoqZqNzfAo",
   "addressKittyCoreMainnet": "0x06012c8cf97bead5deae237070f9587f8e7a266d",
-  "portTestnet": 8545,
+  "portTestnet": 8546,
   "portApi": 4000
 }
