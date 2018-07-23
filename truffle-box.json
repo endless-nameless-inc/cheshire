@@ -6,8 +6,7 @@
     "LICENSE",
     "README.md",
     "box-img-lg-template.png",
-    "box-img-sm-template.png",
-    "test"
+    "box-img-sm-template.png"
   ],
   "commands": {
     "Start Cheshire": "yarn start",
