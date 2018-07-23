@@ -34,7 +34,7 @@
   },
   "jest": {
     "testMatch": [
-      "**/test/*.js"
+      "**/test-cheshire/*.js"
     ],
     "coverageReporters": [
       "text-summary",
