@@ -51,13 +51,23 @@ const Server = {
   async deployContracts() {
     log('> Deploying CryptoKitties contracts to testnet...')
 
-    const kittyCore = await Contract.deploy('KittyCore')
     const ownerCut = 375
+
+    const kittyCore = await Contract.deploy('KittyCore')
+    const saleClockAuction = await Contract.deploy('SaleClockAuction', kittyCore.address, ownerCut)
+    const siringClockAuction = await Contract.deploy('SiringClockAuction', kittyCore.address, ownerCut)
+    const geneScience = await Contract.deploy('GeneScience')
+
+    await kittyCore.setSaleAuctionAddress(saleClockAuction.address)
+    await kittyCore.setSiringAuctionAddress(siringClockAuction.address)
+    await kittyCore.setGeneScienceAddress(geneScience.address)
+    await kittyCore.unpause()
 
     return {
       kittyCore: kittyCore.address,
-      saleClockAuction: (await Contract.deploy('SaleClockAuction', kittyCore.address, ownerCut)).address,
-      siringClockAuction: (await Contract.deploy('SiringClockAuction', kittyCore.address, ownerCut)).address,
+      saleClockAuction: saleClockAuction.address,
+      siringClockAuction: siringClockAuction.address,
+      geneScience: geneScience.address,
     }
   },
 
